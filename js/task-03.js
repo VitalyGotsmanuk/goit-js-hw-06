@@ -12,3 +12,23 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+//const list = document.getElementsByClassName("gallery");
+const list = document.querySelector(".gallery");
+list.style.listStyle = `none`;
+//list.style.display = `flex`;
+console.log(list);
+
+function createMarkup(arr) {
+    const li = arr.map(({ url, alt }) => 
+      `<li>
+        <img src="${url}" alt="${alt}"  width="400"/>
+       
+      </li>`).join('')
+
+    list.insertAdjacentHTML('beforeend', li)
+    
+   //console.dir(li);
+}
+
+createMarkup(images)
