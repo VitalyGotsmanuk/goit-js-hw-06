@@ -8,20 +8,23 @@ const inputData = document.querySelector(`#validation-input`);
 inputData.addEventListener("blur", hendlerCheck);
 
 function hendlerCheck (evt){
-    const inputValue = evt.currentTarget.value;
+    const inputValue = evt.currentTarget; // Створюємо змінну для поточного об'єкту і всі зміни та порівняння проводимо через цю змінну.
 
-    //console.log(inputValue.length); // Кількість символів
-    // якщо кількість символів що ввели быльша за значення обмеження (6), то рамка червона, ящо меньша - зелена. 
-    if (inputValue.length > inputData.dataset.length){
-        
-        inputData.classList.value = "invalid"; 
-                  
-        console.log(`Рамка червона!`);
-        console.dir(inputData.classList.value); 
-    } else {
-        inputData.classList.value = "valid";
+    console.log(inputValue.value.trim().length); // Кількість символів
+    // якщо кількість символів що ввели не дорівнює 6, то рамка червона, яkщо 6  - зелена. 
+
+    if (inputValue.value.trim().length === Number(inputData.dataset.length)){
+        inputValue.classList.remove("invalid"); 
+        inputValue.classList.add("valid");
 
         console.log(`Рамка зелена!`);
         console.dir(inputData.classList.value);
+        
+    } else {
+        inputValue.classList.remove("valid"); 
+        inputValue.classList.add("invalid");
+                          
+        console.log(`Рамка червона!`);
+        console.dir(inputData.classList.value);    
     }
 }
