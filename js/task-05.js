@@ -8,7 +8,8 @@ const spanData = document.querySelector(`#name-output`);
 inputData.addEventListener("input", hendlerInsert);
 
 function hendlerInsert (evt){
-    const inputValue = evt.currentTarget.value.trim(); //.trim() - прибирає пробіли на початку та наприкінці строки.
+    const inputValue = evt.currentTarget.value.trim(); //Це те що вводимо до input
+    //.trim() - прибирає пробіли на початку та наприкінці строки.
     spanData.textContent = inputValue;
 
     //console.log(spanData.innerHTML);
@@ -17,5 +18,5 @@ function hendlerInsert (evt){
     if (inputValue === "") {
         spanData.textContent = "Anonymous"; 
         //inputData.placeholder = "Please enter your name";
-    }
+    } //Коли input порожній - поветраємо "Anonymous"
 };
