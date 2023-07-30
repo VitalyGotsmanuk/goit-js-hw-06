@@ -29,6 +29,9 @@ function handlerSubmit(evt) {
 
 };
 
-elements.loginForm.addEventListener("blur", () => {
-    elements.loginForm.elements.value = "";
-  });
+alert(`ALARM!!!!`);
+
+// elements.loginForm.addEventListener("blur", () => {
+//     elements.loginForm.elements.value = "";
+//   });
+
