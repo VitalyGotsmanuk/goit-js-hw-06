@@ -32,6 +32,3 @@ function handlerSubmit(evt) {
 };
 
 //alert(`ALARM!!!!`);
-
-
-

@@ -13,9 +13,3 @@ list.forEach ((list) => {
     console.log('Category:', list.firstElementChild.outerText);
     console.log('Elements:', list.lastElementChild.children.length);
 });
-
-
-
-
-
-

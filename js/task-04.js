@@ -29,7 +29,6 @@ function hendlerClick (evt){
     }
 
     elements.count.innerHTML = counterValue;
-
     //console.log(`counterValue`, counterValue);
     //console.log(`span`, elements.count.innerHTML);
 };

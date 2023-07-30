@@ -19,4 +19,3 @@ function handlerClick (evt){
   bodyColor.style.backgroundColor = getRandomHexColor();
   colorValue.textContent = getRandomHexColor();
 };
-

@@ -31,4 +31,4 @@ function createMarkup(arr) {
    //console.dir(li);
 }
 
-createMarkup(images)
+createMarkup(images);
