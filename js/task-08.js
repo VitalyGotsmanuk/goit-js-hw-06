@@ -2,7 +2,6 @@ const elements = {
     loginForm: document.querySelector(`.login-form`),
 };
 
-
 //console.dir(elements.loginForm.elements);
 //console.dir(elements.loginForm);
 
@@ -19,7 +18,7 @@ function handlerSubmit(evt) {
     //console.log(password.value);
     if (password.value === "" || email.value === ""){ 
             //console.log(email.value);
-            alert(`Увага! Всі поля повинні бути заповнені.`);
+            alert(`Увага!\nВсі поля мають бути заповнені.`);
     } else {
         const userCard = {
         email: email.value,
@@ -27,14 +26,12 @@ function handlerSubmit(evt) {
             
         console.log(`E-mail:`, userCard.email);
         console.log(`Password:`, userCard.password);
-    };
+
+        elements.loginForm.reset();
+        };
 };
-
-
 
 //alert(`ALARM!!!!`);
 
-// elements.loginForm.addEventListener("blur", () => {
-//     elements.loginForm.elements.value = "";
-//   });
+
 
