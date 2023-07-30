@@ -8,7 +8,6 @@ const elements = {
 
 elements.loginForm.addEventListener(`submit`, handlerSubmit);
 
-
 function handlerSubmit(evt) {
     
     evt.preventDefault();
@@ -16,20 +15,24 @@ function handlerSubmit(evt) {
 
     const {email, password} = evt.currentTarget.elements;
       
-    console.log(email.value);
-    console.log(password.value);
-       
-    const userCard = {
-        email: evt.currentTarget.email.value,
-        password: evt.currentTarget.password.value,
-        };
+    //console.log(email.value);
+    //console.log(password.value);
+    if (password.value === "" || email.value === ""){ 
+            //console.log(email.value);
+            alert(`Увага! Всі поля повинні бути заповнені.`);
+    } else {
+        const userCard = {
+        email: email.value,
+        password: password.value, };
             
         console.log(`E-mail:`, userCard.email);
         console.log(`Password:`, userCard.password);
-
+    };
 };
 
-alert(`ALARM!!!!`);
+
+
+//alert(`ALARM!!!!`);
 
 // elements.loginForm.addEventListener("blur", () => {
 //     elements.loginForm.elements.value = "";
