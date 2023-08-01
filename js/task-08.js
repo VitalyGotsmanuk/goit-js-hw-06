@@ -24,8 +24,10 @@ function handlerSubmit(evt) {
         email: email.value,
         password: password.value, };
             
-        console.log(`E-mail:`, userCard.email);
-        console.log(`Password:`, userCard.password);
+        //console.log(`E-mail:`, userCard.email);
+        //console.log(`Password:`, userCard.password);
+
+        console.log(userCard);
 
         elements.loginForm.reset();
         };

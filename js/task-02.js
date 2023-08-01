@@ -11,11 +11,14 @@ const list = document.querySelector(`#ingredients`);
 
 // const li = document.createElement(`li`);
 
-ingredients.forEach(element => {
+function createList(arr) {
+  arr.forEach(element => {
     const li = document.createElement(`li`);
     li.textContent = [element];
     li.classList.add(`item`);
     list.append(li);
-});
+  });
+}
+createList (ingredients);
 
 // console.log(...list);
